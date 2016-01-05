@@ -1,4 +1,4 @@
-#include "mi_syscall.h"
+#include "mi_kernel.h"
 
 static int current_process;
 

@@ -1,5 +1,5 @@
-#ifndef _SYS_
-#define _SYS_
+#ifndef _KERNEL_
+#define _KERNEL_
 
 
 #include <stdio.h>
