@@ -1,23 +1,23 @@
 # $Id: Makefile 102 2009-11-03 13:14:39Z simon_duquennoy $
 ##############################################################################
-ROOTDIR = /home/radgeur/Documents/M1/ASE/ase_tp5/libhardware-linux-x86-64-r103
+ROOTDIR = /home/enseign/ASE
 LIBNAME = hardware
 
 CC	= gcc
-CFLAGS	= -Wall -ansi -pedantic
+CFLAGS	= -Wall -ansi -pedantic -m32
 LIBDIR  = $(ROOTDIR)
 INCDIR  = -I$(ROOTDIR)/include
 LIBS    = -L$(ROOTDIR)/lib -l$(LIBNAME)
 
 ###------------------------------
-### Main targets 
+### Main targets
 ###------------------------------------------------------------
 BINARIES= mmu_manager oracle
 
 all: $(BINARIES)
 
 ###------------------------------
-### Main rules 
+### Main rules
 ###------------------------------------------------------------
 
 %.o: %.c
@@ -40,5 +40,5 @@ oracle: oracle.o matrix.o
 .PHONY: clean realclean depend
 clean:
 	$(RM) *.o $(BINARIES) Makefile.depends
-realclean: clean 
+realclean: clean
 	$(RM) vdiskA.bin vdiskB.bin

@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include "swap.h"
 
 #define SYSCALL_SWTCH_0 16
 #define SYSCALL_SWTCH_1 17
@@ -21,6 +22,7 @@ struct tlb_entry_s {
 
 
 extern void mmu_handler();
+extern void mmu_handler2();
 extern int ppage_of_vaddr(int ctx, unsigned vaddr);
 extern void switch_to_process0(void);
 extern void switch_to_process1(void);
